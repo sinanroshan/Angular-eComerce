@@ -1,0 +1,111 @@
+
+<!--  Desktop -->
+<div class="pc" *ngFor="let i of bill">
+    <topbar></topbar>
+    <div class="goback" (click)="backClicked()">
+       < back to Orders
+    </div>
+<div class="bg">   
+<div class="products">
+    <div class="shipping">
+        <div class="top_deliver_to">Shipping to</div>
+        <div class="top_c_name">{{i[5]}}</div>
+        <br> <div class="marker"> Order ID <span class="content">#{{i[0]}}</span></div>
+        <div class="marker">Order Status: <span class="content">{{i[12]}}</span> 
+                        <span class="summery" (click)="getOrderSummery()">Order summary</span></div>
+    </div>
+    <div class="order-item" *ngFor="let p of orderProducts">
+        <button class="btn_cancel" *ngIf="p[9]=='Order confirmed' && i[12]=='Order confirmed'" (click)="cnacel(cancelitemAlert, p[2],p[3])">cancel</button>
+        <div class="p_name">{{p[3]}}</div>
+        <div class="p_category">{{p[5]}}</div>
+        <div class="p_qty">Qty: {{p[4]}}</div>
+        <div class="p_price">Rs {{p[8]}} /-</div>
+    </div>
+</div>
+<div class="order-details">
+    <div class="order-summery">
+        <div class="order_card">
+            <div class="order_id">Order - #{{i[0]}}</div>
+            <div class="order_date">Order placed on: {{i[4]}} </div>
+            <div class="order_status">Order status: {{i[12]}}</div>
+        </div>
+        <div class="order_card_details">
+            <div class="m_marker">Bag Total <span class="m_content">₹​{{mrpTotal}}.00</span></div>
+            <div class="m_marker">Bag Savings <span class="m_content">₹​{{discount}}.00</span></div>
+            <div class="total">Total Amount: <span class="T_price">Rs.{{i[2]}}.00</span></div>
+        </div>
+    </div>
+    <div class="address">
+        <div class="add_head">Deliver to</div>
+        <div>{{i[5]}}</div>
+        <div>{{i[8]}}</div>
+        <div>{{i[7]}} - <span>{{i[9]}}</span> </div>
+        <div *ngIf="landmark">{{i[10]}}</div>
+        <div>{{i[11]}}</div>
+        <div>Phone: <span class="phone">+91 {{i[1]}}</span></div>
+    </div>
+</div>
+</div> 
+</div>
+
+
+<!--  mobile -->
+<div class="mob" *ngFor="let i of bill">
+    <div class="m_navbar">
+        <nav class="navbar sticky-top navbar-light shadow p-2 h6 m_navbar">
+          <div class="goBack" (click)="backClicked()">&nbsp;
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg> 
+            &nbsp; &nbsp;<span class="m_order"> Order #{{i[0]}}</span>
+          </div>
+        </nav>
+    </div>
+    <div class="m_bg">
+        <br>
+            <div class="m_topCard">
+                <div class="m_cardprice">Total Amount  ₹​{{i[2]}}.00  
+                    <span class="m_card_date">Order On: {{i[4]}} </span></div>
+                <br>
+                <div class="m_goto">
+                    <div class="m_card_status">{{i[12]}} 
+                        <span class="m_summery" (click)="getOrderSummery()">Order summary</span></div>
+                    
+                </div>
+            </div>
+            <div class="m_order_item" *ngFor="let p of orderProducts">
+                <button class="btn_cancel" *ngIf="p[9]=='Order confirmed' && i[12]=='Order confirmed'" (click)="cnacel(cancelitemAlert, p[0],p[1])">cancel</button>
+                <div class="p_name">{{p[3]}}</div>
+                <div class="p_category">{{p[5]}}</div>
+                <div class="p_qty">Qty: {{p[4]}}</div>
+                <div class="p_price">Rs {{p[8]}}</div>
+            </div><br>
+            <div class="order_details">
+                <div class="m_order_head">Order Details</div>
+                <div class="m_marker">Bag Total <span class="m_content">₹​{{mrpTotal}}.00</span></div>
+                <div class="m_marker">Bag Savings <span class="m_content">₹​{{discount}}.00</span></div>
+                <div class="m_marker_total">Total Amount <span class="m_content_total">₹{{i[2]}}</span></div>
+            </div><br>
+            <div class="delivery_address">
+                <div class="add_head">Deliver to</div>
+                <div>{{i[5]}}</div>
+                <div>{{i[8]}}</div>
+                <div>{{i[7]}} - <span>{{i[9]}}</span> </div>
+                <div *ngIf="landmark">{{i[10]}}</div>
+                <div>{{i[11]}}</div>
+                <div>Phone: <span class="phone">+91 {{i[1]}}</span></div>
+            </div><br>
+    </div>
+    <div class="btn_bg"><button class="gohome" (click)="gohome()">Continue Shopping</button> </div>
+</div>
+
+
+<ng-template #cancelitemAlert >
+    <div class="modal-body">
+        <div class="action_cancel" (click)="closemodel(cancelitemAlert)">&times;</div>
+        <div class="cancel_head">Cancel Item</div>
+        <p>Do you want to cancel this...?</p>
+    <div class="p_name">{{cancelP_name}}</div>
+    </div>
+     <button class="action_ok" (click)="cancelItem(cancelitemAlert)">Cancel Item</button>
+</ng-template>

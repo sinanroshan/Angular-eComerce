@@ -1,0 +1,54 @@
+<!--  desktop -->
+<div class="pc">
+<div class="text-center" id="loading">
+  <div class="spinner-border" role="status">
+  </div>
+</div>
+<div class="plist">
+<div class="row bg-white" >
+
+    <div class="card m-3"
+     *ngFor="let Product of productList">
+      <img class="card-img-top " src="{{Product.image1}}" style="width: 200px; height: 200px;" >
+      <div class="card-name" style="color: rgb(0, 109, 109); font-size: 15px;"><strong>{{Product.pname}}</strong></div>
+      <div class="card-body">   
+           <span class="d-flex"> <div style="color: brown;"><strong>Rs. {{Product.price}}</strong></div><div>&nbsp;<del class="text-muted"> MRP: {{Product.mrp}}</del></div> </span>
+        <div class="d-flex justify-content-between align-items-center">
+            <button type="button"  class="btn btn-sm btn-primary product-btn btn_cart" (click)=AddtoCart(Product)>Add to
+              Cart</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary product-btn" [routerLink]="['/shop/product', Product.productId]"  routerLinkActive="router-link-active"  >View Details</button>
+      </div>
+     </div>
+  </div>
+</div>  
+
+<div class="toTop" (click)="gotoTop()" id="toTop" title="Go to top">
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+</svg>
+</div>
+</div>
+<div style="margin-left:0px;" class="mt-auto">
+</div> 
+</div>
+
+
+<!--  mobile -->
+<div class="mob"> 
+  <div class="text-center" id="loading1">
+    <div class="spinner-border" role="status">
+    </div>
+  </div>
+<div class="m_plist row">
+  <div class="m_card" *ngFor="let p of productList" [routerLink]="['/shop/product', p.productId]">
+    <img class="m_card_img" src="{{p.image1}}">
+        <div class="m_pDetails" style="display: block;">
+            <div class="m_pNmae">{{p.pname}}</div>
+            <div class="m_pCategory">{{p.pcategory}}</div>
+            <div class="m_price">₹<span class="m_pPrice">{{p.price}}</span> &nbsp;<span class="m_pmrp">(₹{{p.mrp}})</span></div> 
+        </div>
+  </div>
+</div>
+</div>
+  <app-bottombar></app-bottombar>
+

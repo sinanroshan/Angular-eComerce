@@ -1,0 +1,63 @@
+<div class="bg" *ngFor="let i of bill">
+<div class="center">Order Details For Order Number #{{i[0]}}
+<br>
+<div class="save" (click)=print()>print this page</div></div>
+<table class="billtable" width="70%" cellspacing="0" cellpadding="0" align="center">
+<tbody>
+    <tr><td>
+    <table width="100%" cellspacing="0" cellpadding="0" align="center" border="0">
+        <tbody>
+            <tr>
+                <b>Date: </b>{{i[4]}}</tr>
+            <tr>
+                <b>Ecoms Order Number:</b> {{i[0]}}</tr>
+            <tr>
+                <b>Total Amount:</b> {{i[2]}}.00/-</tr>
+            <tr>
+                <b>Delivery Address:</b></tr>    
+                <tr>{{i[5]}}
+                    <br>{{i[7]}}- pin:{{i[9]}}<br>{{i[8]}}
+                    <div *ngIf="landmark">Landmark:{{i[10]}}</div><div>City:{{i[11]}}</div>
+                </tr>
+        </tbody>
+    </table>
+    </td></tr>
+    <tr><td>
+        <table width="100%" cellspacing="0" cellpadding="0" align="center" border="2" > 
+            <tbody>
+                <tr>
+                    <td>
+                    <table width="100%" cellspacing="0" cellpadding="0" align="center" border="0" >
+                        <tbody>
+                        <tr class="head" style="padding: 5px;">
+                            <th width="72%"> Ordered Items  </th>
+                            <th width="5%"> Qty</th>
+                            <th width="12%"> Price  </th>
+                            <th width="12%"  class="pricehead">Total</th>
+                        </tr>
+                    
+                                    <tr *ngFor="let item of orderProducts; index as i">
+                                        <td class="item">{{i+1}}. <b>{{item[3]}}</b>
+                                            
+                                            <!--<br><div class="details"><span class="pcategory">{{item[3]}}</span>
+                                            <span class="pqty">Qty. {{item[2]}}</span>
+                                            <span class="pprice">Price: {{item[4]}}</span></div> -->
+                                        </td>
+                                        <td>{{item[4]}}</td>
+                                        <td>{{item[6]}}</td>
+                                        <td>{{item[8]}}/-</td>
+                                    </tr>
+                        </tbody>
+                    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="total">₹{{i[2]}}.00/-</th>
+                </tr>
+            </tbody>
+        </table>
+
+    </td></tr>
+</tbody>
+</table>
+</div>

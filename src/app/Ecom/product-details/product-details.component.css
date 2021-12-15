@@ -1,0 +1,204 @@
+
+@media screen and (min-width: 768px) {
+    .pc{
+         display: block;
+     }
+     .mob{
+         display: none;
+     }
+ }
+
+ @media screen and (max-width: 767px) {
+    .pc{
+        display: none;
+    }
+    .mob{
+         padding-top: 65px;
+         background-color: white;
+         width: 100%;
+     }
+ }
+
+.product{
+    background-color: rgb(245, 245, 245);
+}
+.image{
+    height: 500px;
+    width: 600px;
+}
+.image-card{
+    height: 450px;
+    width: 500px;
+    margin-left: 55px;
+    margin-top: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    border: rgba(33,33,33,.2);
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+    object-fit:cover, fill;
+    padding: 9px;
+
+}
+.details-card{
+    height: 500px;
+    position: relative;
+    top: 20px;
+    
+}
+.p_name{
+    padding-top: 5px;
+    font-size: 30px;
+    padding-bottom: 20px;
+    font-weight: 500;
+    max-width: 550px;
+    height: auto;
+    color: #000000;
+    line-height: 40px;
+    word-wrap: break-word;
+}
+.mrp{
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: line-through;
+    padding-bottom: 5px;
+    padding-top: 20px;
+    font-family:monospace;
+}
+.price{
+    font-size: 25px;
+    padding-bottom: 20px;
+    font-weight: 500;
+    color: #A93226;
+    font-family:monospace;
+}
+.category{
+    color: #5e5e5e;
+    font-family: system-ui;
+    font-size: 12px;
+    padding-bottom: 5px;
+    padding-top: 20px;
+}
+.button-area{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-width: .5px;
+}
+.button{
+    background-color: #ec6205d7; 
+    border: 1px;
+  color: rgb(0, 0, 0);
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: 30px;
+}
+.button:hover {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+  }
+
+
+  .m_product{
+      height: 100%;
+  }
+  .m_image-card{
+      width: 98%;
+      height: 98%;
+      margin: auto;
+  }
+  .m_Pdetails{
+      padding-top: 10px;
+      font-family: Helvetica, Arial, sans-serif;
+      padding-left: 10px;
+      height: auto;
+      padding-bottom: 40px;
+      
+  }
+  .m_category{
+      font-weight: lighter;
+      font-size: 12px;
+      color: gray;
+  }
+  .m_p_name{
+      color: black;
+      max-height: 50px;
+      padding-bottom: 10px;
+      width: 98%;
+      font-size: 20px;
+      font-weight: bolder;
+      overflow: hidden;
+      white-space: inherit;
+  }
+  .m_price{
+      padding-left: 10px;
+      margin-top: 20px;
+      color: black;
+      font-weight: bold;
+      font-family:monospace;
+      font-size: 18px;
+  }
+  .m_mrp{
+    font-size: 12px;
+    text-decoration: line-through;
+    padding-left: 20px;
+    color: rgb(134, 134, 134);
+  }
+  .m_btn_bg{
+    bottom: 0;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    border-top: rgb(204, 204, 204) solid .3px;
+    display: flex;
+  }
+  .m_button{
+    font-family: Helvetica, Arial, sans-serif;
+    width: 300px;
+    height: 40px;
+    background-color: #E67E22;
+    margin: auto;
+    border: 1px solid #E67E22;
+    font-size: 15px !important;
+    font-weight: 600;
+    border-radius: 4px !important;
+    color: #fff;
+  }
+  .m_button:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -30px;
+    transition: 0.5s;
+  }
+
+
+  .m_cart_button{
+    font-family: Helvetica, Arial, sans-serif;
+    width: 300px;
+    height: 40px;
+    background-color: #E67E22;
+    margin: auto;
+    border: 1px solid #E67E22;
+    font-size: 15px !important;
+    font-weight: 600;
+    border-radius: 4px !important;
+    color: rgb(0, 0, 0);
+    right: -20px;
+    transition: 0.10s;
+
+  }
+  .m_cart_button::before{
+    background-color: rgb(0, 0, 0);
+    color: rgb(238, 0, 0);
+    opacity: 0;
+    transition: all 0.8s
+}

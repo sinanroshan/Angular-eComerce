@@ -1,0 +1,145 @@
+@media screen and (min-width: 768px) {
+  .pc{
+       display: block;
+   }
+   .mob{
+       display: none;
+   }
+}
+
+@media screen and (max-width: 767px) {
+  .pc{
+      display: none;
+  }
+  .mob{
+       padding-top: 90px;
+       background-color: white;
+   }
+}
+
+.loginbg{
+  padding-top: 100px;
+}
+.alert_box{
+  padding: 10px;
+  margin:auto;
+  align-items: center;
+  width: 350px;
+  background-color: #ffffff;
+  border:1px solid crimson;
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  box-shadow: brown;
+  box-shadow: 0 0 15px  rgba(241, 120, 120, 0.678);
+}
+.box{
+  align-items: center;
+  width: 350px;
+  height: auto;
+  background-color: #ffffff;
+  border:1px solid rgb(219, 219, 219);
+  margin: 1% auto;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.welcome{
+  padding-TOP: 10px;
+  font-size: 8px;
+  font-stretch: semi-condensed;
+  font-weight: lighter;
+  text-align: center;
+}
+.head{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 25px;
+  font-stretch: semi-expanded;
+  font-weight:500;
+  text-align: center;
+  color: crimson;
+}
+.user_suggesion{
+  margin-top: 10px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 200;
+  color: crimson;
+  margin-left: 47px;
+}
+.userid{
+  background-color: rgb(255, 255, 255); 
+  width: 250px;
+  height: 35px;
+  border: none;
+  border-bottom: 1px solid rgb(167, 167, 167);
+}
+.userid:focus-within{
+  outline: none;
+  border-bottom: 2px solid crimson;
+  
+}
+.userid:focus::placeholder{
+color: transparent;}
+.message{
+  text-align: left;
+  font-size: 10px;
+  font-weight: 200;
+  color: rgb(226, 149, 5);
+  margin-left: 47px;
+}
+.pss_suggesion{
+  margin-top: 20px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 200;
+  color: crimson;
+  margin-left: 47px;
+}
+.password{
+  background-color: rgb(255, 255, 255); 
+  width: 250px;
+  height: 35px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid rgb(167, 167, 167);
+  outline: none;
+}
+.password:focus-within{
+outline: 0px none;
+border-bottom: 2px solid crimson;
+}
+.password:focus::placeholder{
+  color: transparent;}
+.submit{
+  margin-top: 30px;
+  background-color: crimson;
+  color: white;
+  width: 230px;
+  height: 35px;
+  border:none;
+  margin-bottom: 35px;
+}
+.Register{
+  font-size: 13px;
+  font-weight: 200;
+  color: rgb(209, 68, 16);
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+.Register:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.m_box{
+  margin-top: 3%;
+  align-items: center;
+  width: 350px;
+  height: auto;
+  background-color: #ffffff;
+  border:1px solid rgb(219, 219, 219);
+  margin: auto;
+  text-align: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
