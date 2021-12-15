@@ -1,0 +1,91 @@
+<topbar></topbar>
+<!-- Desktop -->
+<div class="pc">
+<p class="space"></p>
+<div class="top-stripe"><div class="link" routerLink="">Home </div>/
+                    <div class="link" routerLink='/bag' >Cart</div>/
+                    <div>Chekout</div>
+</div>
+<div>
+<div class="column left">
+<div class="head">SHIPPING DETAILS</div>
+<ng-container *ngIf="Add==null">
+    <div class="adress_msg">No Address were adedd, add An Address to Proceed.</div>
+    <button class="addAdress" (click)=addAddress()>Add Address</button>
+</ng-container>
+<ng-container  *ngIf="Add!=null">
+<div class="address">
+    <button class="chng_address" (click)=addAddress()>Change Address</button>
+    <div class="head2">SHIPPING ADDRESS</div>
+    
+    <li class="add-head">Address</li>
+    <div class="add-name">Name: {{Fname}}</div>
+    <div class="add-line">Address: {{House}}</div>
+    <div class="add-line">Landmark: {{landmark}}</div>
+    <div class="add-line">Place: {{place}}</div>
+    <div class="add-line">Pin-{{pin}}</div>
+    <div class="add-line">City: {{city}}</div>
+    <div class="add-line">Phone: +91 {{mob}}</div>
+    
+</div>
+</ng-container>
+</div>
+
+
+<div class="column right">
+    <div class="chekout"  >
+        <span class="head_b">BILL DETAILS</span>
+        <div class="bill">
+        <div class="billprice mrp">Total MRP <span class="price">₹{{TotalMrp}}</span></div>
+        <div class="billprice Discount">Discount on MRP <span class="price">₹{{DiscountOnMrp}}</span></div>
+        <div class="billprice delivery">Delivery charge <span class="price">₹0.00</span> </div>
+        <div class="billprice Total">Total Amount <span class="price_total">₹{{TotalPrice}}.00</span></div>
+        </div>
+        <button class="chekout-btn" (click)=confirmOrder()>Confirm Order</button>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- Mobile -->
+<div class="mob">
+    <div class="head">SHIPPING DETAILS</div>
+    <ng-container *ngIf="Add==null">
+        <div class="adress_msg">No Address were adedd, add An Address to Proceed.</div>
+        <button class="addAdress" (click)=addAddress()>Add Address</button>
+    </ng-container>
+
+    <ng-container  *ngIf="Add!=null">
+        <div class="m_address">
+            <button class="m_chng_address" (click)=addAddress()>Change Address</button>
+            <div class="m_head2">SHIPPING ADDRESS</div>
+            
+            <li class="add-head">Address</li>
+            <div class="add-name">Name: {{Fname}}</div>
+            <div class="add-line">Address: {{House}}</div>
+            <div class="add-line">Landmark: {{landmark}}</div>
+            <div class="add-line">Place: {{place}}</div>
+            <div class="add-line">Pin-{{pin}}</div>
+            <div class="add-line">City: {{city}}</div>
+            <div class="add-line">Phone: +91 {{mob}}</div>
+            
+        </div>
+        
+
+    <div >
+        <span class="m_head_b">BILL DETAILS</span>
+        <div class="m_bill">
+        <div class="billprice mrp">Total MRP <span class="price">₹{{TotalMrp}}</span></div>
+        <div class="billprice Discount">Discount on MRP <span class="price">₹{{DiscountOnMrp}}</span></div>
+        <div class="billprice delivery">Delivery charge <span class="price">₹0.00</span> </div>
+        <div class="billprice Total">Total Amount <span class="price_total">₹{{TotalPrice}}.00</span></div>
+        </div>
+        
+    </div>
+    <div class="m_btn_bg">
+        <span class="m_chekout_price">₹{{TotalPrice}}.00</span>
+        <button class="m_chekout-btn" (click)=confirmOrder()>Place Order</button>
+    </div>
+</ng-container>
+</div>
+

@@ -1,0 +1,63 @@
+<!--  Desktop -->
+<topbar></topbar>
+<div class="pc">
+<div class="space">
+<div class="top-stripe"><div class="link" routerLink="">Home  </div>/
+                    <div>My Orders</div>
+</div>
+<div class="head">Your Orders</div>
+
+    <div class="order_bg">
+      <div class="box" *ngFor="let inv of orderInv">
+         <div class="tob_bar" (click)=viewOrder(inv[0])>
+             <div class="date"><div>Orderd On</div><div class="date1">{{inv[3]}}</div></div>
+             <div class="tamount"><div>Total Amount</div><div class="tamount1">₹{{inv[1]}}.00</div></div>
+             <!-- <div class="orderqty"><div>Total Items{{inv[2]}}</div> -->
+             <div class="right">
+                 <div>
+                    <div class="order_no">Order No:<span class="inv_no">#{{inv[0]}}</span></div>
+                    <br><div class="status ">{{inv[4]}}</div>
+                 </div>
+             </div>
+         </div> <div class="Cancel" *ngIf="(inv[4]=='Order confirmed')"  (click)=cnacel(cancelitemAlert,inv[0])>Cancel order</div>
+         <div class="products" (click)=viewOrder(inv[0])>View order details</div>
+      </div>
+       
+    </div>
+</div>
+</div>
+
+
+<!--  mobile -->
+<div class="mob">
+    <div class="m_order_bg">
+        <div class="m_box" *ngFor="let inv of orderInv" >
+           <div class="tob_bar" (click)=viewOrder(inv[0])>
+               <div class="m_date"><div>Orderd On</div><div class="m_date1">{{inv[3]}}</div></div>
+               <div class="m_tamount"><div>Total Amount</div><div class="m_tamount1">₹{{inv[1]}}.00</div></div>
+               <!-- <div class="orderqty"><div>Total Items{{inv[2]}}</div> -->
+               <div class="m_right">
+                   <div>
+                      <div class="order_no">Order No:<span class="inv_no">#{{inv[0]}}</span></div>
+                      <br><div class="status ">{{inv[4]}}</div>
+                   </div>
+               </div>
+           </div> <div class="m_products" *ngIf="(inv[4]=='Order confirmed')" (click)=cnacel(cancelitemAlert,inv[0])>Cancel order</div>
+                    <div class="m_products" (click)=viewOrder(inv[0])>View order details</div>
+        </div>
+         
+    </div>
+
+</div>
+<div class="mt-auto">
+    <app-bottombar></app-bottombar>
+  </div>
+  <ng-template #cancelitemAlert >
+    <div class="modal-body">
+        <div class="action_cancel"  (click)="closemodel(cancelitemAlert)">&times;</div>
+        <div class="cancel_head">Cancel Item</div>
+        <p>Do you want to cancel this...?</p>
+    <div class="p_name">cancel this order</div>
+    </div>
+     <button class="action_ok" (click)="cancelItem(cancelitemAlert)">Cancel Item</button>
+</ng-template>

@@ -1,0 +1,24 @@
+<topbar></topbar>
+<div class="pc">
+<div class="top"></div>
+<div class="TopBar">
+    <div class="link" routerLink="">Home </div>/ <div class="link">category</div>
+</div>
+<div class="container" >
+    under devlop</div>
+<div class="mt-auto">
+    <app-bottombar></app-bottombar>
+</div>
+</div>
+
+
+<!-- Topbar Mobile -->
+<div class="mob">
+    <div *ngFor="let c of SubCategory">
+        <div style="display: flex;">
+        <button class="m_category" value="{{c.category}}" (click)=showProducts($event)>{{c.category}}</button>
+        </div>
+    </div>
+
+</div>
+

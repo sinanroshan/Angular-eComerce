@@ -1,0 +1,60 @@
+<topbar></topbar>
+<div class="pc">
+<div class="loginbg">
+</div>
+<div class="alert_box" *ngIf="!login"> 
+  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="brown" class="bi bi-dash-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+  </svg>
+  Your password is incorrect
+</div>
+<div class="box">
+  <div class="welcome"></div>
+  Welcome To Ecomerce, Please 
+    <div class="head">
+      Login / SignUp
+    </div>
+    <div>
+      <div class="user_suggesion">Enter Mobile Number*</div>
+      <input class="userid" type="Text" id="userid" (keyup)=chekuser() (keyup.enter)=continue() maxlength="10" placeholder="Phone">
+      <div class="message">Please enter a valid mobile number (10 digits)</div>
+    </div>
+    <div>
+      <div class="pss_suggesion" id="Spassword"  >Password*</div>
+      <input class="password" type="password" id="password" (keyup.enter)=continue() placeholder="password">
+    </div>
+    
+    <button class="submit" (click)=continue() >CONTINUE</button>
+    <!--<div class="Register" [routerLink]="['/Register-User']" routerLinkActive="router-link-active" >New To eComerce? Create Account</div>-->
+</div>
+</div>
+
+<div class="mob">
+  <div class="alert_box" *ngIf="!login"> 
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="brown" class="bi bi-dash-circle" viewBox="0 0 16 16">
+      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+      <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+    </svg>
+    Your password is incorrect
+  </div>
+<br>
+  <div class="m_box">
+    <div class="welcome"></div>
+    Welcome To Ecomerce, Please 
+      <div class="head">
+        Login / SignUp
+      </div>
+      <div>
+        <div class="user_suggesion">Enter Mobile Number*</div>
+        <input class="userid" type="Text" id="m_userid" (keyup)="m_chekuser()" (keyup.enter)=continue() maxlength="10" placeholder="Phone">
+        <div class="message">Please enter a valid mobile number (10 digits)</div>
+      </div>
+      <div>
+        <div class="pss_suggesion" id="m_Spassword"  >Password*</div>
+        <input class="password" type="password" id="m_password" (keyup.enter)=m_continue() placeholder="password">
+      </div>
+      
+      <button class="submit" (click)=m_continue() >CONTINUE</button>
+      </div>
+</div>

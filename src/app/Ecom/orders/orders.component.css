@@ -1,0 +1,248 @@
+@media screen and (min-width: 768px) {
+    .pc{
+         display: block;
+         background-color: white;
+     }
+     .mob{
+         display: none;
+     }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .pc{
+        display: none;
+    }
+    .mob{
+        padding-top: 65px;
+         background-color: white;
+     }
+  }
+  
+
+.space{
+    padding-top: 85px;
+    height: 100%;
+    overflow-y: hidden;
+}
+.top-stripe{
+    background-color: #f3f5f5;
+    height: 40px;
+    margin-top: 15px;
+    padding-left: 50px;
+    align-items: center;
+    display:flex;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.link:hover{
+    cursor: pointer;
+    color: blue;
+    display:inline-block;
+    text-decoration: underline;
+
+}
+.head{   
+    font-size: 27px;
+    margin-top: 23px;
+    margin-left: 300px;
+    font-stretch: semi-condensed;
+    font-weight: lighter;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.order_bg{
+    margin: auto;
+    min-height: 450px;
+    max-height: auto;
+    align-content: center;
+    width: 800px;
+    background-color: white;
+    padding-bottom: 20px;
+}
+.box{
+    margin: auto;
+    margin-top: 10px;
+    width: 790px;
+    height: auto;
+    border: 1px solid rgb(219, 219, 219);
+    padding-bottom: 3px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.tob_bar{
+    background-color: #f7f7f7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    display: inline-flex;
+    padding-top: 5px;
+    color:gray;
+    font-size: 12px;
+    cursor: pointer;
+}
+.box:hover{
+    border: 1px solid rgba(148, 148, 148, 0.678);
+    box-shadow: 0 0 15px rgba(109, 109, 109, 0.384); 
+    transition: box-shadow .3s;
+}
+.date{
+    margin-left: 30px;
+    width:80px;
+    height: 100%;
+}
+.date1{
+    color:rgb(70, 70, 70);
+    font-size: 13px;
+}
+.tamount{
+    position: right;
+    margin-left: 40px;
+    width:130px;
+    height: 100%;
+}
+.tamount1{
+    color:rgb(70, 70, 70);
+    font-size: 13px;
+}
+.right{
+    margin-right: 10px;
+    float: right;
+    margin-left: 390px;
+    height: 100%;
+}
+.order_no{
+    float: left;
+    font-size: 11px;
+    color: rgba(235, 98, 74, 0.829);
+    cursor: pointer;
+    font-weight: 600;
+    height: fit-content;
+}
+.order_no:hover .inv_no{
+    text-decoration: underline;
+}
+.status{
+    float: right;
+    cursor:default;
+    color: rgb(54, 89, 194);
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch:expanded;
+}
+
+.products{
+    padding-top: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 668px;
+    font-stretch:expanded;
+    cursor: pointer;
+}
+.products:hover{
+    text-decoration: underline;
+    color: rgb(11, 11, 190);
+}
+.Cancel{
+    padding-top: 3px;
+    font-size: 12px;
+    margin-left: 668px;
+    font-stretch:expanded;
+    cursor: pointer;
+}
+.Cancel:hover{
+    text-decoration: underline;
+    color: rgb(11, 11, 190);
+}
+
+
+.m_order_bg{
+    margin: auto;
+    min-height: 600px;
+    max-height: auto;
+    align-content: center;
+    width: 95%;
+    background-color: white;
+    overflow-x:hidden;
+}
+.m_box{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 80px;
+    border: 1px solid rgb(219, 219, 219);
+    padding-bottom: 3px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+.m_right{
+    float: right;
+    margin-left: 32%;
+    height: 100%;
+}
+.m_products{
+    float: right;
+    padding-top: 3px;
+    margin-right: 10px;
+    font-size: 12px;
+    font-stretch:expanded;
+    cursor: pointer;
+}
+.m_products:hover{
+    text-decoration: underline;
+    color: rgb(11, 11, 190);
+}
+.m_date{
+    margin-left: 5px;
+    width:auto;
+    height: 100%;
+}
+.m_date1{
+    color:rgb(70, 70, 70);
+    font-size: 13px;
+}
+.m_tamount{
+    position: right;
+    margin-left: 20px;
+    width:auto;
+    height: 100%;
+}
+.m_tamount1{
+    color:rgb(70, 70, 70);
+    font-size: 13px;
+}
+
+
+#cancel{
+    border-radius: 0;
+    border: none;
+}
+.cancel_head{
+    text-align: left;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.action_cancel{
+    font-size: 20px;
+    font-weight: 500;
+    float: right;
+    padding-top: -5px;
+    padding-right: -5px;
+    background-color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+.action_ok{
+    float: right;
+    width: 100%;
+    height: 35px;
+    border: none;
+    color: white;
+    background-color: #21618C;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+}

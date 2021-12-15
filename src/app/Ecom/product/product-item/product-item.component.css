@@ -1,0 +1,168 @@
+@media screen and (min-width: 768px) {
+    .pc{
+         display: block;
+     }
+     .mob{
+         display: none;
+     }
+ }
+
+ @media screen and (max-width: 767px) {
+    .pc{
+        display: none;
+    }
+    .mob{
+         padding-top: 65px;
+         background-color: white;
+     }
+ }
+.top-stripe{
+    background-color: #f3f5f5;
+    height: 40px;
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+    display:flex;
+    position: fixed;
+    scroll-behavior: none;
+}
+.link:hover{
+    cursor: pointer;
+    color: crimson;
+    display:inline-block;
+    font-weight: 500;
+}
+.plist{
+    padding-top:100px;
+    padding-left: 30px;
+    background-color: white;
+    overflow-x: hidden;
+    height: 100%;
+}
+.card{
+    width:6cm;
+    height: 8.6cm;
+    cursor: pointer;
+}
+.card:hover{
+  transition: box-shadow .3s;
+  border-radius:10px;
+  float: left;
+  border: rgba(33,33,33,.2);
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  height: auto;
+}
+.card-img-top {
+    margin-top: 9px;
+    object-fit: cover;
+}
+.card-img-top img{
+    border-radius:12px;
+}
+.text-muted{
+    font-size: 12px;
+    font-family:monospace;
+}
+.card-name{
+    width: 5.5cm;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.card:hover > .card-name{
+    white-space: inherit;}
+.btn_cart{
+    background-color: #E67E22;
+    border:#E67E22;
+}  
+.btn_cart:hover{
+    background-color: #d1711d;
+}  
+
+    #loading {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.7;
+        background-color: rgba(255, 255, 255, 0);
+        z-index: 99;
+      }      
+      .toTop {
+        display: none; /* Hidden by default */
+        position: fixed; /* Fixed/sticky position */
+        bottom: 30px; /* Place the button at the bottom of the page */
+        right: 30px; /* Place the button 30px from the right */
+        z-index: 99; /* Make sure it does not overlap */
+        border: none; /* Remove borders */
+        outline: none; /* Remove outline */
+        cursor: pointer; /* Add a mouse pointer on hover */
+    }
+        .toTop :hover,:focus {
+          color: slategray;
+        }
+        
+.m_plist{
+    background-color: white;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.m_card{
+    width: 50%;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(223, 223, 223)  .3px ;
+    font-family: Helvetica, Arial, sans-serif;
+}    
+.m_pDetails{
+    bottom: 0;
+}
+.m_card_img{
+    top: 0;
+    margin: auto;
+    min-height: 73%;
+    height: auto;
+    max-height: 80%;
+    width: auto;
+    max-width: 110%;
+    min-width: 100%;
+}    
+.m_pNmae{
+    color: rgb(0, 109, 109);
+    font-weight: bold;
+    height: auto;
+    width: 100%;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+}
+.m_pCategory{
+font-weight: lighter;
+color: rgb(80, 80, 80);
+font-size: 10px;
+margin-top: -5px;
+}
+.m_price{
+    font-family:monospace;
+    font-size: 12px;
+}
+.m_pPrice{
+    font-weight: bold;
+    
+
+}
+.m_pmrp{
+    font-size: 11px;
+    text-decoration: line-through gray;
+    color: rgb(107, 107, 107);
+    font-weight: lighter;
+}

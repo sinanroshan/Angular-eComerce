@@ -1,0 +1,84 @@
+
+
+.bg{
+    padding-top: 100px;
+    background-color: white;
+    padding-bottom: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .box{
+    align-items: center;
+    width: 380px;
+    height: auto;
+    background-color: #ffffff;
+    border:1px solid rgb(219, 219, 219);
+    margin: auto;
+    text-align: center;
+  }
+  .welcome{
+    padding-TOP: 10px;
+    font-size: 8px;
+    font-stretch: semi-condensed;
+    font-weight: lighter;
+    text-align: center;
+  } 
+  .head{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 25px;
+    font-stretch: semi-expanded;
+    font-weight:500;
+    text-align: center;
+    color: crimson;
+  }
+  .suggesion{
+    margin-top: 10px;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 200;
+    color: crimson;
+    margin-left: 60px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  .fname{
+    background-color: #F2F4F4; 
+    width: 255px;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid rgb(167, 167, 167);
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  .fname:focus-within{
+    background-color: white;
+    outline: none;
+    
+    border-bottom: 2px solid crimson;
+    
+  }
+  .fname:focus::placeholder{
+  color: transparent;}
+
+  .submit{
+    margin-top: 30px;
+    background-color: crimson;
+    color: white;
+    width: 230px;
+    height: 35px;
+    border:none;
+    margin-bottom: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .login{
+    font-size: 13px;
+    font-weight: 200;
+    color: rgb(209, 68, 16);
+    font-weight: 500;
+    margin-bottom: 40px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .login:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }

@@ -1,0 +1,39 @@
+<topbar></topbar>
+
+<div class="bg">
+<div class="box">
+    <div class="welcome"></div>
+            Welcome To (ecomerce) 
+      <div class="head">
+        Register Here
+      </div>
+      <div>
+        <div class="suggesion">First Name*</div>
+        <input class="fname" type="Text" id="fname">
+      </div>
+      <div>
+        <div class="suggesion">Second Name*</div>
+        <input class="fname" type="Text" id="sname">
+      </div>
+      <div>
+        <div class="suggesion">Mobile Number*</div>
+        <input class="fname" readonly value="{{phone}}" type="number" id="phone">
+      </div>
+      <div>
+        <div class="suggesion">Email id</div>
+        <input class="fname" type="email" id="email">
+      </div>
+      <div>
+        <div class="suggesion">Password*</div>
+        <input class="fname" type="password" id="p1">
+      </div>
+      <div>
+        <div class="suggesion">Re-enter Password*</div>
+        <input class="fname" type="password" id="p2">
+      </div>
+      <button class="submit" (click)=SignUp() >CONTINUE</button>
+      <div class="login" [routerLink]="['/loginUser']" routerLinkActive="router-link-active" >Already have an account? Sign in</div> 
+</div>
+</div>
+
+

@@ -1,0 +1,62 @@
+.bg{
+    background-color: white;
+    padding-bottom: 10px;
+}
+.center{
+    font-family: Helvetica, Arial, sans-serif;
+    padding-top: 30px;
+    text-align:center;
+    color: rgba(235, 98, 74, 0.829);
+    font-size: large;
+    font-weight: bold;
+    font-stretch: expanded;
+}
+.save{
+    text-align:center;
+    color:rgb(160, 133, 99);
+    text-decoration: rgb(160, 133, 99) underline;
+    font-size: 13px;
+    font-weight: 500;
+}
+.save:hover{
+    color:rgb(199, 166, 126);
+    text-decoration: rgb(199, 166, 126)  underline;
+    cursor: pointer;
+}
+.billtable{
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 30px;
+}
+.head{
+    border-bottom: 1px dotted black;
+}
+.pricehead{
+    text-align:left;
+}
+
+.item{
+    overflow: hidden;
+    padding-left: 4px;
+    padding-bottom: 10px;
+}
+.details{
+    padding-left: 15px;
+    font-size: 11px;
+    margin-top: -5px;
+}
+.pcategory{
+    padding-left: 15px;
+}
+.pqty{
+    padding-left: 15px;
+}
+.pprice{
+    padding-left: 10px;
+}
+.total{
+    width: 100%;
+    border-top: 1px dotted black;
+    text-align:right;
+    padding-right: 5px;
+    color: brown;
+}

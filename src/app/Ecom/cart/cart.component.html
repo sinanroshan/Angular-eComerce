@@ -1,0 +1,113 @@
+<topbar></topbar>
+
+<!-- Desktop -->
+
+<div class="pc"> 
+<div class="cart"></div>
+
+                <div class="top-stripe"><div class="link" routerLink="">Home </div>/
+                    <div  >Cart</div>
+                </div>
+<ng-container *ngIf="cart.length !=0">
+    <div class=" column left" id=style-4><span class="head">CART PRODUCTS</span>
+    
+<div *ngFor="let item of cart; let i = index" >
+    <div class="cart-list" >
+        <div (click)="removeItem(item.productId)" class="btn-remove">X</div>
+            <div>
+             <img class="cart_img" src="{{item.image1}}" alt="">
+            </div>
+            <div class="cart_name">{{item.pname}}</div>
+            <span style="display:inline-flex;">
+                <div class="cart_price">₹{{item.price}}</div>
+                <div class="cart_mrp">MRP. ₹​{{item.mrp}}</div>  </span>
+            <div class="number">
+                <span class="minus" (click)=QtyMinus(item)>-</span>
+                <input class="qty" id={{item.pname}} type="text" readonly value="{{item.Quantity}}"/>
+                <span class="plus" (click)=QtyPlus(item)>+</span>
+            </div>
+            
+             <div class="total_p">Total -  <span class="total_price">₹{{item.Total}}</span></div>
+
+</div>
+</div>
+</div>
+
+
+<div class="column right">
+    <div class="chekout"  >
+        <span class="head_b">BILL DETAILS</span>
+        <div class="bill">
+        <div class="billprice mrp">Total MRP <span class="price">₹{{TotalMrp}}</span></div>
+        <div class="billprice Discount">Discount on MRP <span class="price">₹{{DiscountOnMrp}}</span></div>
+        <div class="billprice delivery">Delivery charge <span class="price">₹0.00</span> </div>
+        <div class="billprice Total">Total Amount <span class="price_total">₹{{TotalPrice}}.00</span></div>
+        </div>
+        <button class="chekout-btn" (click)=cheout()>Place Order</button>
+    </div>
+</div>
+</ng-container>
+
+<ng-container *ngIf="cart.length ==0">
+    <div class="container">
+        <div>
+            <h4 style="font-size:25px;">Your cart is empty!</h4>
+            <h6 style="font-size:medium;">Add item to it now</h6>
+            <button routerLink="" class="goHome">Shop Now</button>
+        </div>
+    </div>
+</ng-container>
+</div>
+
+<!-- Mobile -->
+<div class="mob">
+
+    <ng-container *ngIf="cart.length ==0">
+        <div class="container">
+            <div >
+                <h4 style="font-size:25px;">Your cart is empty!</h4>
+                <h6 style="font-size:medium;">Add item to it now</h6>
+                <button routerLink="" class="goHome">Shop Now</button>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="cart.length !=0">
+    <div style="min-height: 280px;" >
+        <div class="m_cart-list" *ngFor="let item of cart; let i = index" >
+            <div (click)="removeItem(item.productId)" class="btn-remove">X</div>
+                <div>
+                 <img class="m_cart_img" src="{{item.image1}}" alt="">
+                </div>
+                <div class="cart_name">{{item.pname}}</div>
+                <span style="display:inline-flex;">
+                    <div class="cart_price">₹{{item.price}}</div>
+                    <div class="cart_mrp">MRP. ₹​{{item.mrp}}</div>  </span>
+                <div class="number">
+                    <span class="minus" (click)=QtyMinus(item)>-</span>
+                    <input class="qty" id={{item.pname}} type="text" readonly value="{{item.Quantity}}"/>
+                    <span class="plus" (click)=QtyPlus(item)>+</span>
+                </div>
+                
+                 <div class="total_p">Total -  <span class="total_price">₹{{item.Total}}</span></div>
+    
+        </div>
+    </div>
+    <div >
+        <span class="m_head_b">BILL DETAILS</span>
+        <div class="m_bill">
+        <div class="billprice mrp">Total MRP <span class="price">₹{{TotalMrp}}</span></div>
+        <div class="billprice Discount">Discount on MRP <span class="price">₹{{DiscountOnMrp}}</span></div>
+        <div class="billprice delivery">Delivery charge <span class="price">₹0.00</span> </div>
+        <div class="billprice Total">Total Amount <span class="price_total">₹{{TotalPrice}}.00</span></div>
+        </div>
+        
+    </div>
+    <div class="m_btn_bg">
+        <span class="m_chekout_price">₹{{TotalPrice}}.00</span>
+        <button class="m_chekout-btn" (click)=cheout()>Place Order</button>
+    </div>
+</ng-container>
+</div>
+
+

@@ -1,0 +1,124 @@
+
+<!-- Topbar Desktop -->
+<div class="pc">
+<nav class="navbar sticky-top navbar-expand-sm navbar-light shadow p-2 h6">
+  <a style="margin-left: 2%; margin-right: 2%;" class="navbar-brand" href="#">
+    <img src="../assets/images/logoicon.png" width="36" height="36" class="d-inline-block align-top" alt=" Ekart">
+  </a>
+
+<!-- category -->
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent" >
+  
+<div class="dropdown" *ngFor="let c of Supercategory">
+<button class="super-category " value={{c.godown_name}} (mouseover)="getSubcategory($event)" (click)="getSubcategory($event)">{{c.godown_name}}</button>
+<div class="sub-category">
+  <div >{{c.godown_name}}</div>
+  <button class="category"  *ngFor="let c of SubCategory"
+  value="{{c.category}}" (click)=showProducts($event)>{{c.category}}</button>
+</div>
+</div>
+<!-- search -->
+        <form style="max-width: 350px; margin-left: 120px;" class="input-group ">
+           <input class="form-control serachBox" type="text"
+                  #searchbox  placeholder="Search for products" 
+                  (keyup.enter)="Search(searchbox.value)"
+                  (keyup)="searchItems(searchbox.value)"><span>
+           <button class="input-group-text basic-addon1" id="basic-addon1" (click)="Search(searchbox.value)" >
+           <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+           </span>
+           </button></span>
+             <div class="suggestionBox" id="suggestionBox" *ngIf="productList!=null">
+             <li class="suggestionList" *ngFor="let P of productList" (click)=route(P.productId)>
+                <img src="{{P.image1}}" style="width: 30px; height: 30px;" >
+               {{P.pname}}
+             </li>
+             </div>
+        </form>
+  <div style="margin-left: 30px; margin-right: 10px; margin-top: 10px;"  id="navbarSupportedContent">
+    <div class="navbar-nav">
+     <div class=" dropdown">
+      <div class="mr-sm-3" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="-5 -6 19 20">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+          </svg>
+          <h5 class="user_name">{{name}}</h5>
+       </div>
+       <div class="drop_profile">
+         <div class="p_head">{{fname}}</div>
+        <button id="login" class="btn_login" (click)=goto()>LOGIN / SIGNUP</button>
+        <div class="profile" routerLink="/bag">My Cart</div>
+        <div class="profile" (click)=order()>My Orders</div>
+        <div class="profile">Contact US</div>
+        <div id="signout" class="profile" (click)=signout()>SignOut</div>
+       </div>
+      </div>
+      
+      
+        <div class="nav-item"  style="margin-left: 20px; display: flex; cursor: pointer;" routerLink="/bag">  
+          <svg style="display: block; position: relative; " xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-bag-fill" viewBox="-1 -6 25 20">
+            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
+          </svg>
+            <span>
+            <div id=badge class="badge">{{TotalCartItem}}</div>
+            </span>
+        </div>
+      
+    </div>
+  </div>  
+</div>
+</nav>
+</div>
+
+
+
+<!-- Topbar Mobile -->
+<div class="mob">
+  <nav class="navbar sticky-top navbar-expand navbar-light shadow p-2 h6 m_navbar">
+    <div *ngIf="mob_sidbar" class="m_menu_close" id="m_menu_close" (click)="closeMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
+        <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
+      </svg>
+    </div>
+    <div *ngIf="!mob_sidbar" class="m_menu_open" id="m_menu_open" (click)="openMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+    </div>
+    <a class="m_band" href="#">Ecomerce</a>
+    <div class="m_right">
+        <div class="m_search" routerLink="/search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+          </div>
+      <div class="m_bag" routerLink="/bag">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="20" height="20" fill="black" class="bi bi-bag-fill" viewBox="0 0 16 16">
+          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
+        </svg>
+      </div>
+    </div>
+  </nav>
+  <div *ngIf="mob_sidbar" id="mySidenav" class="sidenav">
+    <div *ngFor="let c of Supercategory">
+        <button class="m_superCat_list" value={{c.godown_name}} 
+        (click)=showCategory($event)>{{c.godown_name}} </button>
+    </div>   
+    <div class="m_profile" >
+      <div class="m_login"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+      </svg></span> {{fname}}</div>
+      <div class="m_cart" routerLink="/bag">My Cart</div>
+      <div class="m_orders" (click)=order()>My Orders</div>
+      <div class="m_signout" id="signout" (click)=signout()>SignOut</div>
+    </div>
+  </div>
+</div>
+
+

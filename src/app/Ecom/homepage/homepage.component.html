@@ -1,0 +1,52 @@
+
+<topbar></topbar>
+<!--  Desktop -->
+<div class="pc">
+<div style="padding-top:100px;"></div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<div id="carouselExampleDark" class="carousel carousel-dark slide1" data-bs-ride="carousel" >
+    <div class="carousel-inner justify-content-center">
+      <div class="carousel-item active " data-bs-interval="2000">
+        <img src="../assets/images/home_page/slide2.jpg" class="rounded mx-auto d-block">
+        <div class="carousel-caption d-none d-md-block">
+          
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="../assets/images/home_page/slide3.jpg" class="rounded mx-auto d-block">
+        <div class="carousel-caption d-none d-md-block">
+         
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/home_page/slide1.jpg" class="rounded mx-auto d-block">
+        <div class="carousel-caption d-none d-md-block">
+      
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+  <div class="mt-auto">
+    <app-bottombar></app-bottombar>
+  </div>
+</div>
+
+<!-- mobile -->
+<div class="mob"> 
+<div class="super_category" >
+  <div class="m_category" *ngFor="let c of Supercategory" (click)="m_showCategory(c.godown_name)"> 
+    <div class="c_image" ></div>{{c.godown_name}}
+  </div>
+</div>
+  
+   </div>
