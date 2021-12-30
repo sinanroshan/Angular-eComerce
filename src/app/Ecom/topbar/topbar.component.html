@@ -34,8 +34,8 @@
            </span>
            </button></span>
              <div class="suggestionBox" id="suggestionBox" *ngIf="productList!=null">
-             <li class="suggestionList" *ngFor="let P of productList" (click)=route(P.productId)>
-                <img src="{{P.image1}}" style="width: 30px; height: 30px;" >
+             <li class="suggestionList" *ngFor="let P of productList" (click)=route(P.pname)>
+                <img src="{{P.keyImage}}" style="width: 30px; height: 30px;" >
                {{P.pname}}
              </li>
              </div>

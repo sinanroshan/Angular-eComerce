@@ -30,7 +30,7 @@ getCatogeryList(SuperCategory: String) :Observable<Product[]>{
   return this.http.get<Product[]>(this.productApihost+`products/`+sCategory);
 }
 serchProducts(search:string):Observable<Product[]>{
-  return this.http.get<Product[]>(this.productApihost+search);
+  return this.http.get<Product[]>(this.productApihost+'search/'+search);
 }
 serchKeyword(search:string):Observable<Product[]>{
   return this.http.get<Product[]>(this.productApihost+`keyword/`+search);}

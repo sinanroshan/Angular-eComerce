@@ -15,7 +15,7 @@
     <div class="cart-list" >
         <div (click)="removeItem(item.productId)" class="btn-remove">X</div>
             <div>
-             <img class="cart_img" src="{{item.image1}}" alt="">
+             <img class="cart_img" src="{{item.keyImage}}" alt="">
             </div>
             <div class="cart_name">{{item.pname}}</div>
             <span style="display:inline-flex;">
@@ -77,7 +77,7 @@
         <div class="m_cart-list" *ngFor="let item of cart; let i = index" >
             <div (click)="removeItem(item.productId)" class="btn-remove">X</div>
                 <div>
-                 <img class="m_cart_img" src="{{item.image1}}" alt="">
+                 <img class="m_cart_img" src="{{item.keyImage}}" alt="">
                 </div>
                 <div class="cart_name">{{item.pname}}</div>
                 <span style="display:inline-flex;">

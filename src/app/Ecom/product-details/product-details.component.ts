@@ -22,6 +22,7 @@ adtoCart:boolean=false;
 getProduct(){
   this.productitemservice.ViewProduct(this.pId).subscribe(data =>{
     this.product = data;
+    console.log(this.product)
   });
 }
 AddtoCart(item){
