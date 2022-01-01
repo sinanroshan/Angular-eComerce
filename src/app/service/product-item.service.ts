@@ -76,8 +76,8 @@ updateQtyMinus(itm){
   getCartData(){
     return JSON.parse(localStorage.getItem('cart'));
   }
-  ViewProduct(pId:any):Observable<Product[]>{
-    return this.http.get<Product[]>(this.productApihost+pId);
+  ViewProduct(pname:any):Observable<Product[]>{
+    return this.http.get<Product[]>(this.productApihost+pname);
   }
   removeCartItem(pid: any){
       this.CartItem= JSON.parse(localStorage.getItem('cart'));

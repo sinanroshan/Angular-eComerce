@@ -6,6 +6,5 @@ export class Product {
     price: number;
     stock: number;
     supid: number;
-    image: Byte;
-
+    image: string;
 }
