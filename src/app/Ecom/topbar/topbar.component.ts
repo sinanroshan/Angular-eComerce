@@ -63,7 +63,6 @@ export class TopbarComponent implements OnInit {
    this.search="search?="+this.search;
    this.router.navigate(['/shoping', this.search]).then(() => {
     window.location.reload();
-    //[routerLink]="['/shop/product', Product.productId]"
   }); }  
  }
 
