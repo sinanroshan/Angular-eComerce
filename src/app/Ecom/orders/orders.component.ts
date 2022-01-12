@@ -44,7 +44,7 @@ export class OrdersComponent implements OnInit {
     this.modalService.dismissAll(cancelitemAlert);
   }
   cancelItem(cancelitemAlert){
-    this.auth.cancelOrder(this.cancelInvNo,"Order Cancelled").subscribe(res=>{
+    this.auth.cancelOrder(this.cancelInvNo,"Cancelled").subscribe(res=>{
       window.location.reload();
     });
     this.modalService.dismissAll(cancelitemAlert);

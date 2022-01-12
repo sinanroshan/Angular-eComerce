@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class AuthLoginService {
 
-  private hostApi = "http://192.168.1.3:9090/auth";
+  private hostApi = "http://192.168.1.5:9090/auth";
   private localApi = "http://localhost:9090/auth";
   constructor(private http: HttpClient) { }
   public User:any;

@@ -71,7 +71,7 @@ closemodel(cancelitemAlert){
   this.modalService.dismissAll(cancelitemAlert);
 }
 cancelItem(cancelitemAlert){
-  this.auth.cancelThis(this.inv, this.cancelP_id,"Order Cancelled").subscribe(res=>{
+  this.auth.cancelThis(this.inv, this.cancelP_id,"Cancelled").subscribe(res=>{
     window.location.reload();
   });
   this.modalService.dismissAll(cancelitemAlert);

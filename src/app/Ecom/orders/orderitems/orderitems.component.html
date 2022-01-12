@@ -15,11 +15,11 @@
                         <span class="summery" (click)="getOrderSummery()">Order summary</span></div>
     </div>
     <div class="order-item" *ngFor="let p of orderProducts">
-        <button class="btn_cancel" *ngIf="p[9]=='Order confirmed' && i[12]=='Order confirmed'" (click)="cnacel(cancelitemAlert, p[2],p[3])">cancel</button>
-        <div class="p_name">{{p[3]}}</div>
-        <div class="p_category">{{p[5]}}</div>
-        <div class="p_qty">Qty: {{p[4]}}</div>
-        <div class="p_price">Rs {{p[8]}} /-</div>
+        <button class="btn_cancel" *ngIf="p[8]=='Order confirmed' && i[12]=='Order confirmed'" (click)="cnacel(cancelitemAlert, p[1],p[2])">cancel</button>
+        <div class="p_name">{{p[2]}}</div>
+        <div class="p_category">{{p[4]}}</div>
+        <div class="p_qty">Qty: {{p[3]}}</div>
+        <div class="p_price">Rs {{p[7]}} /-</div>
     </div>
 </div>
 <div class="order-details">
@@ -74,11 +74,11 @@
                 </div>
             </div>
             <div class="m_order_item" *ngFor="let p of orderProducts">
-                <button class="btn_cancel" *ngIf="p[9]=='Order confirmed' && i[12]=='Order confirmed'" (click)="cnacel(cancelitemAlert, p[0],p[1])">cancel</button>
-                <div class="p_name">{{p[3]}}</div>
-                <div class="p_category">{{p[5]}}</div>
-                <div class="p_qty">Qty: {{p[4]}}</div>
-                <div class="p_price">Rs {{p[8]}}</div>
+                <button class="btn_cancel" *ngIf="p[8]=='Order confirmed' && i[12]=='Order confirmed'" (click)="cnacel(cancelitemAlert, p[0],p[1])">cancel</button>
+                <div class="p_name">{{p[2]}}</div>
+                <div class="p_category">{{p[4]}}</div>
+                <div class="p_qty">Qty: {{p[3]}}</div>
+                <div class="p_price">Rs {{p[7]}}</div>
             </div><br>
             <div class="order_details">
                 <div class="m_order_head">Order Details</div>

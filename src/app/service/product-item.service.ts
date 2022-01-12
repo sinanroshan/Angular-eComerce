@@ -8,10 +8,10 @@ import { Product } from '../Model/product';
 })
 export class ProductItemService {
 
-  private orderUrlhost="http://192.168.1.3:9090/auth/";
+  private orderUrlhost="http://192.168.1.5:9090/auth/";
   private orderUrllocal = "http://http://localhost:9090/auth";
 
-  private productApihost="http://192.168.1.3:9090/api/product/";
+  private productApihost="http://192.168.1.5:9090/api/product/";
   private ProductApilocal = "http://localhost:9090/api/product/";
   
   public CartItem :any=[]

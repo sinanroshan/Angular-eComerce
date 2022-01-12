@@ -8,9 +8,9 @@ import { Product } from '../Model/product';
 })
 export class ProductService {
 
-  private productApihost="http://192.168.1.3:9090/api/";
+  private productApihost="http://192.168.1.5:9090/api/";
   private ProductApilocal = "http://http://localhost:9090/api/";
-  private baseURL = "http://192.168.1.3:9090//api/products/";
+  private baseURL = "http://192.168.1.5:9090//api/products/";
   
   constructor(private http: HttpClient) { }
 
