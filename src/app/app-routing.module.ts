@@ -12,18 +12,23 @@ import { OrdersComponent } from './Ecom/orders/orders.component';
 import { BillComponent } from './Ecom/orders/bill/bill.component';
 import { MobSerchComponent } from './Ecom/mob-serch/mob-serch.component';
 import { OrderitemsComponent } from './Ecom/orders/orderitems/orderitems.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  {path : '', component: HomepageComponent},
-  {path : "bag", component: CartComponent},
-  {path : "bag/chekout", component:ChekoutComponent},
-  {path : "$/:token",component:RegisterComponent},
-  {path : "loginUser", component: LoginComponent},
-  {path : "shoping/:item", component:ProductComponent},
-  {path : "shop/product/:item", component:ProductDetailsComponent},
-  {path : "ShopBy/:category", component: CategoryComponent},
-  {path : "myorders", component : OrdersComponent},
-  {path : "order-details/:inv", component : OrderitemsComponent},
+  {path : '', component: HomeComponent,
+    children:[
+      {path : 'home', component: HomepageComponent},
+      {path : "bag", component: CartComponent},
+      {path : "bag/chekout", component:ChekoutComponent},
+      {path : "$/:token",component:RegisterComponent},
+      {path : "shoping/:item", component:ProductComponent},  
+      {path : "shop/product/:item", component:ProductDetailsComponent},
+      {path : "ShopBy/:category", component: CategoryComponent},
+      {path : "myorders", component : OrdersComponent},
+      {path : "order-details/:inv", component : OrderitemsComponent},
+      {path : "loginUser", component: LoginComponent}
+    ]
+},
   {path : "order/summary/:inv", component : BillComponent},
   {path : "search" , component : MobSerchComponent},
 
