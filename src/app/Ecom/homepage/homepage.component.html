@@ -34,6 +34,10 @@
     </button>
   </div>
 </div>
+<br><br>
+<div class="categoryList row" >
+  <div class="card m-3" *ngFor="let c of allCetegory" (click)="showProducts(c.category)">{{c.category}}</div>
+</div>
 
 
   <div class="mt-auto">

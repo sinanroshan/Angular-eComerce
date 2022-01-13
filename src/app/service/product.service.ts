@@ -26,6 +26,9 @@ getCatogeryList(SuperCategory: String) :Observable<Product[]>{
  getSuperCategory() :Observable<Product[]>{
   return this.http.get<Product[]>(this.productApihost+`super_category`);
 } 
+getAllsubCategory():Observable<any>{
+  return this.http.get(this.productApihost+'getCatList');
+}
  getProductByCategory(sCategory: string): Observable<Product[]> {
   return this.http.get<Product[]>(this.productApihost+`products/`+sCategory);
 }
