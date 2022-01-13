@@ -93,7 +93,9 @@ export class ChekoutComponent implements OnInit {
         console.log(res);
                     if(res=="ACCEPTED"){
                     localStorage.removeItem('cart');
-                    this.router.navigate(['myorders'], { replaceUrl: true });
+                    this.router.navigate(['myorders'], { replaceUrl: true }).then(() => {
+                      window.location.reload();
+                    });
                   }
       });
     }

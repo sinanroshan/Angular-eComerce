@@ -28,7 +28,6 @@ import { OrderitemsComponent } from './Ecom/orders/orderitems/orderitems.compone
 import { BillComponent } from './Ecom/orders/bill/bill.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MobSerchComponent } from './Ecom/mob-serch/mob-serch.component';
-import { HomeComponent } from './home/home.component';
 
 
 
@@ -51,8 +50,7 @@ import { HomeComponent } from './home/home.component';
     OrdersComponent,
     OrderitemsComponent,
     BillComponent,
-    MobSerchComponent,
-    HomeComponent,
+    MobSerchComponent
 
   ],
   imports: [

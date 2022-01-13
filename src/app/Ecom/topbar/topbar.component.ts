@@ -53,10 +53,9 @@ export class TopbarComponent implements OnInit {
 
   showProducts(c){
     this.sCtegory=(c.target.value);
-      this.router.navigate(['/shoping', this.sCtegory])
-      //.then( => {
-       // window.location.reload();
-     // });   
+      this.router.navigate(['/shoping', this.sCtegory]).then(() => {
+        window.location.reload();
+      });   
   }
  Search(event:string){
    this.search=event;
