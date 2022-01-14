@@ -7,12 +7,11 @@ import { Product } from '../Model/product';
   providedIn: 'root'
 })
 export class ProductItemService {
+  ip="http://192.168.1.4:9090"
+localhost="http://localhost:9090"
 
-  private orderUrlhost="http://192.168.1.5:9090/auth/";
-  private orderUrllocal = "http://http://localhost:9090/auth";
-
-  private productApihost="http://192.168.1.5:9090/api/product/";
-  private ProductApilocal = "http://localhost:9090/api/product/";
+  private orderApi= this.ip+"/auth/";
+  private ProductApi = this.ip+"/api/product/";
   
   public CartItem :any=[]
   public productList = new BehaviorSubject<any>([]);
@@ -77,7 +76,7 @@ updateQtyMinus(itm){
     return JSON.parse(localStorage.getItem('cart'));
   }
   ViewProduct(pname:any):Observable<Product[]>{
-    return this.http.get<Product[]>(this.productApihost+pname);
+    return this.http.get<Product[]>(this.ProductApi+pname);
   }
   removeCartItem(pid: any){
       this.CartItem= JSON.parse(localStorage.getItem('cart'));
