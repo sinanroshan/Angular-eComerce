@@ -25,25 +25,18 @@
     float: left;
     width: 180px;
   }
-.gallery img {
-    width: 100%;
-    height: auto;
-  }
   div.desc {
     padding: 15px;
     text-align: center;
   }
-  
-  * {
+  *{
     box-sizing: border-box;
-  } 
-
+  }
   .clearfix:after {
     content: "";
     display: table;
     clear: both;
   } 
-
   .super_category{
     height: 95px;
     text-align: center;
@@ -85,7 +78,7 @@
     width:20%;
     padding: 5px;
     cursor: pointer;
-    color: rgb(83, 83, 83);
+    color: rgb(19, 19, 19);
     font-weight: 400;
   }
   .card:hover{
@@ -94,4 +87,24 @@
     transition: box-shadow .3s;
     color: black;
     font-weight: 500;
+  }
+  .m_topCard{
+    width: 100%;
+    height:30%;
+    margin: auto;
+    margin-top: 10px;
+}
+.m_img{
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-family: Helvetica, Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(77, 77, 77, 0.39);
+
+}
+  img{
+  object-fit: contain;
   }
