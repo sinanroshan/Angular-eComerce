@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { Product } from 'src/app/Model/product';
+import { Company, Product } from 'src/app/Model/product';
 import { AuthLoginService } from 'src/app/service/auth-login.service';
 import { ProductItemService } from 'src/app/service/product-item.service';
 import { ProductService } from 'src/app/service/product.service';
@@ -29,13 +29,17 @@ export class TopbarComponent implements OnInit {
             private auth:AuthLoginService, 
             private productitemService:ProductItemService) { 
             }
-
+  companyData:Company;
 
 
   ngOnInit(): void {
     this.issign();
     this.getSuperCatogary();
     this.totalcartItem();
+    this.productsurvice.getCompanyData().subscribe(res=>{
+      this.companyData =res;
+      console.log(this.companyData)
+    })
   }
   getSubcategory(c){
     let SCategory = (c.target.value);

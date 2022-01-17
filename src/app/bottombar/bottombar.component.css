@@ -10,12 +10,26 @@
     color: white;
     font-family: Arial, Courier, Monospace;
   }
-.footlist{
-    font-family: monospace;
-    width: 6cm;
-}a.footlist:hover{
-    color: rgb(255, 255, 255);
+.foot_body{
+    width: 90%;
+    margin: auto;
+    display: flex;
 }
-a.footlist:active{
-    color: rgb(255, 255, 255);
+.ftr_iner{
+    width: 25%;
+}
+.ft_head{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(207, 207, 207);
+    padding-bottom: 20px;
+}
+.ft_content{
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    color: rgb(202, 202, 202);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 12px;
 }

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product } from '../Model/product';
+import { Company, Product } from '../Model/product';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,10 @@ localhost="http://localhost:9090"
   private baseURL = this.ip+"/api/products/";
   
   constructor(private http: HttpClient) { }
-
+  
+getCompanyData(){
+ return this.http.get<Company>(this.ProductApilocal+'/company',{responseType:'json'})
+}
 getProductList(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.baseURL}`);
   }

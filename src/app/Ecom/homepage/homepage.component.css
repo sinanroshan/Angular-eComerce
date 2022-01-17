@@ -45,6 +45,9 @@
     overflow-x: scroll;
     overflow-y: hidden;
   }
+  .super_category::-webkit-scrollbar {
+    display: none;
+  }
   .m_category{
     padding-left: 20px;
     border: none;

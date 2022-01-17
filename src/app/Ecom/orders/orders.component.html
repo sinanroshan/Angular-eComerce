@@ -10,7 +10,7 @@
     <div class="order_bg">
       <div class="box" *ngFor="let inv of orderInv">
          <div class="tob_bar" (click)=viewOrder(inv[0])>
-             <div class="date"><div>Orderd On</div><div class="date1">{{inv[3]}}</div></div>
+             <div class="date"><div>Orderd On</div><div class="date1">{{inv[3] | date:'dd-MM-yyyy'}}</div></div>
              <div class="tamount"><div>Total Amount</div><div class="tamount1">₹{{inv[1]}}.00</div></div>
              <!-- <div class="orderqty"><div>Total Items{{inv[2]}}</div> -->
              <div class="right">

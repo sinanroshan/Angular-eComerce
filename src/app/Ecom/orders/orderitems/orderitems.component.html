@@ -27,7 +27,7 @@
     <div class="order-summery">
         <div class="order_card">
             <div class="order_id">Order - #{{i[0]}}</div>
-            <div class="order_date">Order placed on: {{i[4]}} </div>
+            <div class="order_date">Order placed on: {{i[4] | date:'dd-MM-yyyy'}} </div>
             <div class="order_status">Order status: {{i[12]}}</div>
         </div>
         <div class="order_card_details">
@@ -66,7 +66,7 @@
         <br>
             <div class="m_topCard">
                 <div class="m_cardprice">Total Amount  ₹​{{i[2]}}.00  
-                    <span class="m_card_date">Order On: {{i[4]}} </span></div>
+                    <span class="m_card_date">Order On: {{i[4] | date:'dd-MM-yyyy'}} </span></div>
                 <br>
                 <div class="m_goto">
                     <div class="m_card_status">{{i[12]}} 

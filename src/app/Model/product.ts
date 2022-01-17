@@ -8,3 +8,21 @@ export class Product {
     supid: number;
     image: string;
 }
+export interface Company{
+    name:string
+    phone:number
+    email:string
+    website:string
+    gstNo:string
+    state:string
+    country:string
+    bank:string
+    bankBranch:string
+    bankIfce:string
+    bankAccNO:string
+    address1:string
+    city:string
+    addres2:string
+    pin:number
+    logo:string
+    }
