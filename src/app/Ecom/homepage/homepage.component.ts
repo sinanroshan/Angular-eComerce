@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from 'src/app/Model/product';
 import { ProductService } from 'src/app/service/product.service';
 
 @Component({
@@ -8,8 +9,7 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
-  image1:string = "../images/slide1.jpg";
-
+  productList:Product[]
   sCtegory:any;
   Supercategory:any;
   allCetegory:any;
@@ -19,7 +19,7 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
     this.getSuperCatogary()
     this.getAllcategoryList();
-
+    this.getRandom();
   }
    //product category list
    getSuperCatogary(){
@@ -46,5 +46,13 @@ export class HomepageComponent implements OnInit {
       this.router.navigate(['/shoping',c]).then(() => {
         window.location.reload();
       });   
+  }
+  getRandom(){
+    this.productsurvice.randomProduct().subscribe(res=>{
+      this.productList=res;
+    })
+  }
+  AddtoCart(p){
+    console.log(p);
   }
 }

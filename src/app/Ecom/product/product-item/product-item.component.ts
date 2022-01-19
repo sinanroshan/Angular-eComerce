@@ -40,7 +40,6 @@ export class ProductItemComponent implements OnInit {
   }
 
   showProducts(){
-
     if (this.sCtegory=="all")
     { this.getProducts()}
     else
@@ -55,7 +54,7 @@ export class ProductItemComponent implements OnInit {
   }
 //*****get All Products*****
    getProducts(){
-   this.productsurvice. getProductList().subscribe(data =>{
+   this.productsurvice.randomProduct().subscribe(data =>{
       this.productList = data;
       document.getElementById('loading').hidden = true;
     });

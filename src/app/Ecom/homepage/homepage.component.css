@@ -65,6 +65,12 @@
     border-radius: 50%;
     margin: auto;
   }
+  .suggesionList{
+    width: 98%;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+  }
 
   .categoryList{
     width: 90%;
@@ -111,3 +117,74 @@
   img{
   object-fit: contain;
   }
+  .m_plist{
+    background-color: white;
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+.m_card{
+  width: 50%;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border: solid rgb(223, 223, 223)  .3px ;
+  font-family: Helvetica, Arial, sans-serif;
+} 
+.m_pDetails{
+  bottom: 0;
+}
+.m_card_img{
+  top: 0;
+  margin: auto;
+  min-height: 73%;
+  height: auto;
+  max-height: 80%;
+  width: auto;
+  max-width: 110%;
+  min-width: 100%;
+}    
+.m_pNmae{
+  color: rgb(0, 109, 109);
+  font-weight: bold;
+  height: auto;
+  width: 100%;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: bold;
+}
+.m_pCategory{
+font-weight: lighter;
+color: rgb(80, 80, 80);
+font-size: 10px;
+margin-top: -5px;
+}
+.m_price{
+  font-family:monospace;
+  font-size: 12px;
+}
+.m_pPrice{
+  font-weight: bold;
+  
+
+}
+.m_pmrp{
+  font-size: 11px;
+  text-decoration: line-through gray;
+  color: rgb(107, 107, 107);
+  font-weight: lighter;
+}
+.m_Ccard{
+  text-align: center;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius:10px;
+  display: flex;
+  width:40%;
+  padding: 5px;
+  cursor: pointer;
+  color: rgb(19, 19, 19);
+  font-weight: 400;
+}

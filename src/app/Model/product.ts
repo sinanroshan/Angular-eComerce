@@ -1,12 +1,18 @@
 import { Byte } from "@angular/compiler/src/util";
 
 export class Product {
-    id: number;
-    Pname: string;
-    price: number;
-    stock: number;
-    supid: number;
-    image: string;
+    productId:number;
+    pname:string;
+    discription:string
+    image1:string
+    image2:string
+    image3:string
+    image4:string
+    pcategory:string
+    mrp:number
+    keyImage:string
+    price:number
+    supplierId:string
 }
 export interface Company{
     name:string

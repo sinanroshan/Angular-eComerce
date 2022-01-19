@@ -7,7 +7,7 @@ import { Company, Product } from '../Model/product';
   providedIn: 'root'
 })
 export class ProductService {
-ip="http://192.168.1.3:9090"
+ip="http://192.168.1.4:9090"
 localhost="http://localhost:9090"
   private ProductApilocal = this.ip+"/api/";
   private baseURL = this.ip+"/api/products/";
@@ -17,7 +17,7 @@ localhost="http://localhost:9090"
 getCompanyData(){
  return this.http.get<Company>(this.ProductApilocal+'/company',{responseType:'json'})
 }
-getProductList(): Observable<Product[]> {
+randomProduct(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.baseURL}`);
   }
 addProduct(formData: FormData): Observable <any>{
