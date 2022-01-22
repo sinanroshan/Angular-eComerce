@@ -220,17 +220,19 @@
     opacity: 0;
     transition: all 0.8s
 }
+.p_detailsHead{
+    margin-top: 10px;
+    margin-bottom: -5px;
+    font-weight: bold;
+}
 .p_details{
     margin: auto;
     margin-top: 10px;
     margin-bottom: -5px;
-    font-weight: bold;
     white-space: pre-wrap;
     width: 95%;
     height: auto;
 }
-
-
 
 .suggesionList{
     width: 98%;
