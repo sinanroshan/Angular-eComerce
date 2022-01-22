@@ -221,3 +221,41 @@ margin-top: 10px;
     margin-bottom: -5px;
     font-weight: bold;
 }
+
+
+
+.suggesionList{
+    width: 98%;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+  }
+  .sugg_head{
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+.card{
+    text-align: center;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius:10px;
+    display: flex;
+    width:20%;
+    padding: 5px;
+    cursor: pointer;
+    color: rgb(19, 19, 19);
+    font-weight: 400;
+  }
+  .card:hover{
+    border: rgba(33,33,33,.2);
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+    transition: box-shadow .3s;
+    color: black;
+    font-weight: 500;
+  }
+  .card-name{
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }

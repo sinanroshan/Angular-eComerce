@@ -47,6 +47,21 @@ background-color:rgb(245, 245, 245);" *ngFor="let p of product">
         </div>
 </div>
 
+<div class="suggesionList row">
+  <div class="sugg_head">Trending Deals</div>
+<div class="card m-3"
+*ngFor="let Product of SuggesionList">
+ <img class="card-img-top " src="{{Product.keyImage}}" style=" width: 200px; height: 200px;" >
+ <div class="card-name" style="color: rgb(0, 109, 109); font-size: 15px;"><strong>{{Product.pname}}</strong></div>
+ <div class="card-body">   
+      <span class="d-flex"> <div style="color: brown;"><strong>Rs. {{Product.price}}</strong></div><div>&nbsp;<del class="text-muted"> MRP: {{Product.mrp}}</del></div> </span>
+   <div class="d-flex justify-content-between align-items-center" >
+    <button type="button" class="btn btn-outline-secondary btn-sm" style="margin: auto; width: 90%;" [routerLink]="['/shop/product', Product.pname]">View Details</button>
+ </div>
+</div>
+</div>
+</div>
+
 <div style="margin-left:0px;" class="mt-auto">
     <app-bottombar></app-bottombar>
   </div>

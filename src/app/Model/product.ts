@@ -1,8 +1,8 @@
 import { Byte } from "@angular/compiler/src/util";
 
 export class Product {
-    productId:number;
-    pname:string;
+    productId:number
+    pname:string
     discription:string
     image1:string
     image2:string

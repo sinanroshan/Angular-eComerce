@@ -39,6 +39,10 @@ serchProducts(search:string):Observable<Product[]>{
   return this.http.get<Product[]>(this.ProductApilocal+'search/'+search);
 }
 serchKeyword(search:string):Observable<Product[]>{
-  return this.http.get<Product[]>(this.ProductApilocal+`keyword/`+search);}
+  return this.http.get<Product[]>(this.ProductApilocal+`keyword/`+search);
+}
+prodSuggList(pKey:string){
+  return this.http.get<Product[]>(this.ProductApilocal+`suggesion/`+pKey);
+}
 
 }
