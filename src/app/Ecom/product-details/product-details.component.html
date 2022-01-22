@@ -3,7 +3,7 @@
 <!--  Desktop -->
 <div class="pc">
 <div class="product" style="padding-top:100px; display: flex;
-background-color:rgb(245, 245, 245);" *ngFor="let p of product">
+background-color:rgb(245, 245, 245); height: auto;" *ngFor="let p of product">
     <div  class="image">
       <div id="images" class="carousel carousel-dark slide imgBox" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -42,13 +42,13 @@ background-color:rgb(245, 245, 245);" *ngFor="let p of product">
             </div>
             <div>
                 <div><p>Pruduct Details</p></div>
-                <div>{{p.discription}}</div>
+                <p class="discription">{{p.discription}}</p>
             </div>
         </div>
 </div>
 
 <div class="suggesionList row">
-  <div class="sugg_head">Trending Deals</div>
+  <div class="sugg_head">Suggested For You</div>
 <div class="card m-3"
 *ngFor="let Product of SuggesionList">
  <img class="card-img-top " src="{{Product.keyImage}}" style=" width: 200px; height: 200px;" >
@@ -56,7 +56,7 @@ background-color:rgb(245, 245, 245);" *ngFor="let p of product">
  <div class="card-body">   
       <span class="d-flex"> <div style="color: brown;"><strong>Rs. {{Product.price}}</strong></div><div>&nbsp;<del class="text-muted"> MRP: {{Product.mrp}}</del></div> </span>
    <div class="d-flex justify-content-between align-items-center" >
-    <button type="button" class="btn btn-outline-secondary btn-sm" style="margin: auto; width: 90%;" [routerLink]="['/shop/product', Product.pname]">View Details</button>
+    <button type="button" class="btn btn-outline-secondary btn-sm" style="margin: auto; width: 90%;" (click)=rerout(Product.pname)>View Details</button>
  </div>
 </div>
 </div>
@@ -111,7 +111,18 @@ background-color:rgb(245, 245, 245);" *ngFor="let p of product">
           {{p.discription}}</div>
       </div>
     </div>
-        <app-bottombar></app-bottombar>
+
+    <div class="m_plist row">
+      <div class="sugg_head">Suggested For You</div>
+      <div class="m_card" *ngFor="let p of SuggesionList" (click)=rerout(p.pname)>
+        <img class="m_card_img" src="{{p.keyImage}}">
+            <div class="m_pDetails" style="display: block;">
+                <div class="m_pNmae">{{p.pname}}</div>
+                <div class="m_pCategory">{{p.pcategory}}</div>
+                <div class="m_price">₹<span class="m_pPrice">{{p.price}}</span> &nbsp;<span class="m_pmrp">(₹{{p.mrp}})</span></div> 
+            </div>
+      </div>
+    </div>
     <div class="m_btn_bg">
         <button *ngIf="!adtoCart" class="m_button" (click)=AddtoCart(p)>Add To Cart </button>
         <button *ngIf="adtoCart" class="m_cart_button" routerLink="/bag" >

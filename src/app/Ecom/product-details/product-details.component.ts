@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { pid } from 'process';
 import { Product } from 'src/app/Model/product';
 import { ProductItemService } from 'src/app/service/product-item.service';
@@ -17,7 +17,8 @@ category="";
 pId="";
 adtoCart:boolean=false;
   constructor(private productitemservice : ProductItemService,
-        private Arouter : ActivatedRoute, private productsurvice : ProductService) { }
+        private Arouter : ActivatedRoute, private productsurvice : ProductService,
+        private router : Router) { }
 
   ngOnInit(): void {
     this.pId= this.Arouter.snapshot.paramMap.get('item');
@@ -41,4 +42,10 @@ sugestList(){
     this.SuggesionList=res
   })
 }
+rerout(pname){
+this.router.navigate(['/shop/product',pname]).then(() => {
+  window.location.reload()
+}); 
+}
+
 }
