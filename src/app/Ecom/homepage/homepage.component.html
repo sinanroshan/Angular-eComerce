@@ -36,6 +36,7 @@
 </div>
 <br>
 <div class="suggesionList row">
+  <div class="sugg_head">Trending Deals</div>
 <div class="card m-3"
 *ngFor="let Product of productList">
  <img class="card-img-top " src="{{Product.keyImage}}" style=" width: 200px; height: 200px;" >
@@ -88,6 +89,7 @@
 </div>
 </div>
 <div class="m_plist row">
+  <div class="sugg_head">Trending Deals</div>
   <div class="m_card" *ngFor="let p of productList" [routerLink]="['/shop/product', p.pname]">
     <img class="m_card_img" src="{{p.keyImage}}">
         <div class="m_pDetails" style="display: block;">
