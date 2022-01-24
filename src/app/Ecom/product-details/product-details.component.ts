@@ -16,6 +16,7 @@ SuggesionList: Product[];
 category="";
 pId="";
 adtoCart:boolean=false;
+imgDefault:"../assets/images/default_image.png"
   constructor(private productitemservice : ProductItemService,
         private Arouter : ActivatedRoute, private productsurvice : ProductService,
         private router : Router) { }
