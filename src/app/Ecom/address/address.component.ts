@@ -21,6 +21,7 @@ export class AddressComponent implements OnInit {
   Town_city:string
 
   ngOnInit(): void {
+    
   }
   addAddress(){
     this.fname=btoa((<HTMLInputElement>document.getElementById("fname")).value);

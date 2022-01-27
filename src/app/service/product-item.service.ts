@@ -28,7 +28,7 @@ localhost="http://localhost:9090"
         return item.productId === Product.productId;
       });
     if(exist){
-      exist.Quantity++;
+      //exist.Quantity++;
       exist.Total = exist.Quantity * exist.price;
       this.setCartData(ls);
     }else{
@@ -41,7 +41,6 @@ localhost="http://localhost:9090"
         this.productList.next(this.CartItem);
         this.setCartData(this.CartItem);
         this.productList.next(this.CartItem);
-       // console.log(this.CartItem);
           }
     }
   } 

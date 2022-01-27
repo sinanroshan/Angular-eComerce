@@ -9,8 +9,9 @@
 <div class="row bg-white" >
 
     <div class="card m-3"
-     *ngFor="let Product of productList">
-      <img class="card-img-top " src="{{Product.keyImage}}" style=" width: 200px; height: 200px;" >
+     *ngFor="let Product of productList" >
+      <img class="card-img-top " src="{{Product.keyImage}}" style=" width: 200px; height: 200px;"
+        [routerLink]="['/shop/product', Product.pname]"  routerLinkActive="router-link-active" >
       <div class="card-name" style="color: rgb(0, 109, 109); font-size: 15px;"><strong>{{Product.pname}}</strong></div>
       <div class="card-body">   
            <span class="d-flex"> <div style="color: brown;"><strong>Rs. {{Product.price}}</strong></div><div>&nbsp;<del class="text-muted"> MRP: {{Product.mrp}}</del></div> </span>
