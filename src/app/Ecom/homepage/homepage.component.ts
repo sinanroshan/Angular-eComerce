@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class HomepageComponent implements OnInit {
   productList:Product[]
+  add:any;
   sCtegory:any;
   Supercategory:any;
   allCetegory:any;
@@ -20,7 +21,15 @@ export class HomepageComponent implements OnInit {
     this.getSuperCatogary()
     this.getAllcategoryList();
     this.getRandom();
+    this.getAdd();
   }
+
+getAdd(){
+  this.productsurvice.getAdds().subscribe(res=>{
+    this.add=res;
+    console.log(this.add)
+  })
+}
    //product category list
    getSuperCatogary(){
     this.productsurvice.getSuperCategory()
@@ -51,8 +60,5 @@ export class HomepageComponent implements OnInit {
     this.productsurvice.randomProduct().subscribe(res=>{
       this.productList=res;
     })
-  }
-  AddtoCart(p){
-    console.log(p);
   }
 }

@@ -17,6 +17,9 @@ localhost="http://localhost:9090"
 getCompanyData(){
  return this.http.get<Company>(this.ProductApilocal+'/company',{responseType:'json'})
 }
+getAdds(){
+  return this.http.get<Company>(this.localhost+'/console/getAdds',{responseType:'json'})
+}
 randomProduct(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.baseURL}`);
   }

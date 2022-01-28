@@ -14,7 +14,6 @@ export class BottombarComponent implements OnInit {
   ngOnInit(): void {
     this.productsurvice.getCompanyData().subscribe(res=>{
       this.companyData =res;
-      console.log(this.companyData)
     })
   }
 
