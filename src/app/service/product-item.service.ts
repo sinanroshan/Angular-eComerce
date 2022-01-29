@@ -7,11 +7,11 @@ import { Product } from '../Model/product';
   providedIn: 'root'
 })
 export class ProductItemService {
-  ip="http://192.168.1.4:9090"
+  ip="http://192.168.1.2:9090"
 localhost="http://localhost:9090"
 
-  private orderApi= this.ip+"/auth/";
-  private ProductApi = this.ip+"/api/product/";
+  private orderApi= this.localhost+"/auth/";
+  private ProductApi = this.localhost+"/api/product/";
   
   public CartItem :any=[]
   public productList = new BehaviorSubject<any>([]);

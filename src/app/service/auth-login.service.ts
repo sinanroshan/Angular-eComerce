@@ -6,10 +6,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthLoginService {
-  ip="http://192.168.1.4:9090"
+  ip="http://192.168.1.2:9090"
   localhost="http://localhost:9090"
 
-  private hostApi = this.ip+"/auth";
+  private hostApi = this.localhost+"/auth";
   constructor(private http: HttpClient) { }
   public User:any;
     chekUserName(encodedUname: string):Observable<any>{

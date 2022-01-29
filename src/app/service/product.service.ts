@@ -7,7 +7,7 @@ import { Company, Product } from '../Model/product';
   providedIn: 'root'
 })
 export class ProductService {
-ip="http://192.168.1.4:9090"
+ip="http://192.168.1.2:9090"
 localhost="http://localhost:9090"
   private ProductApilocal = this.ip+"/api/";
   private baseURL = this.ip+"/api/products/";
